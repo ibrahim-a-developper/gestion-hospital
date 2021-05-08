@@ -1,0 +1,112 @@
+
+{% extends 'base.html'%}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container">
+
+  <!-- Trigger the modal with a button -->
+<!--  <button type="button" class="btn btn-info p-2 btn-md" data-toggle="modal" data-target="#myModal" title="Ajouter Equipement">+</button>-->
+
+  <!-- Modal -->
+<!--  <div class="modal fade" id="myModal" role="dialog">-->
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" >Equipement</h4>
+
+                   <button type="button" class="close" data-dismiss="modal">
+                       <a href="#" >&times;</a>
+                   </button>
+
+
+        </div>
+        <div class="modal-body">
+               {% if messages %}
+                 {% for message in messages %}
+
+                     <div class="alert alert-{{message.tags}}" role="alert">
+                        <p>{{message}}</p>
+                     </div>
+                 {% endfor %}
+               {% endif %}
+          <!--    form      -->
+    <div class="card-body">
+                            <form method="post" class="needs-validation" novalidate>
+                                  {% csrf_token %}
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom01">tel</label>
+                                        {{form.tel}}
+                                        {{form.tel.errors}}
+
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom02">adresse</label>
+                                          {{form.adresse}}
+
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">num</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            </div>
+     <input type="text" name="num" class="form-control" id="validationTooltip01" placeholder="First name"  required>
+
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustom03">nom</label>
+                                         {{form.nom}}
+
+                                        <div class="invalid-feedback">
+                                            Please provide a valid city.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="validationCustom04">prenom</label>
+                                        {{form.prenom}}
+
+                                        <div class="invalid-feedback">
+                                            Please provide a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="validationCustom05">specialite</label>
+
+                                        {{form.specialite}}
+
+                                        <div class="invalid-feedback">
+                                            Please provide a valid zip.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-primary" type="submit">Submit form</button>
+                            </form>
+        </div>
+        <div class="modal-footer">
+             <a href="#" >
+                       <button type="button" class="btn btn-default p-2 " data-dismiss="modal">
+                          Close
+                       </button>
+             </a>
+
+        </div>
+
+      </div>
+    </div>
+
+</div>
+
+{%  endblock  %}
+

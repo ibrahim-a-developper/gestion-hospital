@@ -1,0 +1,223 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+
+  <!--main content wrapper-->
+
+
+  <div class="content-wrapper">
+        
+            <!-- <div class="container-fluid"> -->
+        <!--creative states-->
+<!--          creative-state-area-->
+
+        <div class="creative-state-area bg-white">
+            <div class="row">
+                <div class="col-lg-7 col-12">
+
+
+                    {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{{message.tags}}">
+                            {{message}}
+                          
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+
+
+                </div>
+
+                          <div class="col-lg-5  col-12 text-lg-right">
+
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="creative-state-icon bg-danger text-center pull-left">
+                        <i class="vl_clip-board"></i>
+                    </div>
+                    <div class="creative-state-info text-center pull-left">
+                         <a href="#">
+                        <h3 class="mt-4">{{nbr_docteur}}</h3>
+                        <p class="mb-0">TOTALE docteurs</p>
+                         </a>
+
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="creative-state-icon bg-warning text-center pull-left">
+                          <div class="preview col-sm-6 col-md-4 col-lg-3"><i class="ti-plug"></i></div>
+                    </div>
+                    <div class="creative-state-info text-center pull-left">
+                        <a href="#">
+                        <h3 class="mt-4">{{nbr_infermier}}</h3>
+                        <p class="mb-0">totale infermiers</p>
+                        </a>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="creative-state-icon bg-purple text-center pull-left">
+                          <div class="preview"> <i class="icon-direction"></i>  </div>
+                    </div>
+                    <div class="creative-state-info text-center pull-left">
+
+                         <a href="#">
+                        <h3 class="mt-4">{{nbr_service}}</h3>
+                        <p class="mb-0">totale services</p>
+                        </a>
+                        <div class=" widget-action-link">
+<!--                            <small class="text-success weight700">5% <i class="fa fa-long-arrow-up"></i></small>-->
+                        </div>
+
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="creative-state-icon bg-purple text-center pull-left">
+                          <div class="preview">  <i class="vl_user-male"></i> </div>
+                    </div>
+                    <div class="creative-state-info text-center pull-left">
+                        <a href="#">
+                        <h3 class="mt-4">{{nbr_salle}}</h3>
+                        <p class="mb-0">totale salles</p>
+                        </a>
+                        <div class=" widget-action-link">
+<!--                            <small class="text-success weight700">5% <i class="fa fa-long-arrow-up"></i></small>-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    <!--creative states-->
+
+            <div class="container-fluid">
+            <div class="row">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="card card-shadow mb-4">
+                            <div class="card-header border-0">
+                                <div class="custom-title-wrap bar-danger">
+                                    <div class="custom-title">
+                                        Statistique
+                                        <ul class="nav nav-pills nav-pill-primary nav-pill-custom nav-pills-sm float-right " id="pills-tab2" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="pills-today-tab2" data-toggle="pill" href="#pills-weekly2" role="tab" aria-selected="true">Nombre</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="custom-post-title">Statistique etat du service des equipements</div>
+                                </div>
+                            </div>
+                            <div class="card-body pt-5 pb-4">
+                                <div class="tab-content" id="pills-tabContent2">
+                                    <div class="tab-pane fade show active" id="pills-weekly2" role="tabpanel" aria-labelledby="pills-today-tab">
+                                        <div class="row">
+                                            <div class="col-12 col-xl-7 col-md-6 text-center">
+                                                <canvas id="doughnut_chart" class="mb-4" ></canvas>
+                                                <small class="text-muted">Realtime data update instantly</small>
+                                            </div>
+                                            <div class="col-12 col-xl-4 col-md-6 text-muted mt-xl-4">
+                                                <ul class="list-unstyled f12">
+                                                    <li class="list-widget-border mb-3 pb-3">
+                                                        <i class="fa fa-circle pr-2" style="color: #cae59b"></i> 2
+                                                        <span class="float-right">En service</span>
+
+                                                    </li>
+                                                    <li class="list-widget-border mb-3 pb-3">
+                                                        <i class="fa fa-circle pr-2" style="color: #fcdd82"></i> 12
+                                                        <span class="float-right">Non attribut</span>
+                                                    </li>
+                                                    <li class="list-widget-border mb-3 pb-3">
+                                                        <i class="fa fa-circle pr-2 " style="color: #f79490"></i> 14
+                                                        <span class="float-right">En panne</span>
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class=" col-xl-6 col-md-6">
+                    <div class="card card-shadow mb-4 ">
+                        <div class="card-header border-0">
+                            <div class="custom-title-wrap bar-danger">
+                                <div class="custom-title">
+                                    Statistique Direction
+                                    <a href="javascript:;" class="btn-ordering btn-primary float-right ml-2">
+                                        <i class="fa fa-sort-alpha-asc"></i>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-today" role="tabpanel" aria-labelledby="pills-today-tab">
+                                    <ul class="list-unstyled mb-0 list-widget">
+
+                                        <li>
+                                            <div class="media mb-4">
+
+                                                <div class="media-body list-widget-border">
+                                                    <div class="float-left">
+                                                        <h6 class="text-uppercase mb-0">ttt</h6>
+                                                        <span>nombre des equipements installe </span>
+                                                    </div>
+                                                    <div class=" float-right">
+                                                        <strong>1 <i class="fa fa-level-up text-success pl-2"></i></strong>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+
+
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--                auterjki-->
+
+                    </div>
+                </div>
+            </div>
+
+        <!--/creative states-->
+
+
+
+        <!--footer-->
+        <!-- </div> -->
+
+    </div>
+        <!--/footer-->
+
+
+
+
+{% endblock content %}
