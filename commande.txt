@@ -1,2 +1,0 @@
-#add file requirements.txt
-pip freeze > requirements.txt

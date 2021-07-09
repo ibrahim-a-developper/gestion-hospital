@@ -1,0 +1,90 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load crispy_forms_tags %}
+
+
+
+
+    <div class="content-wrapper">
+
+        <div class="container-fluid">
+
+            <!--page title-->
+            <div class="page-title mb-4 d-flex align-items-center">
+                <div class="mr-auto">
+                    <h4 class="weight500 d-inline-block pr-3 mr-3 border-right">Detail Docteur</h4>
+                    <nav aria-label="breadcrumb" class="d-inline-block ">
+                        <ol class="breadcrumb p-0">
+                            <li class="breadcrumb-item"><a href="{% url 'personne:home' %}">Accueil</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!--/page title-->
+
+            <div class="row">
+                <div class="col-xl-9">
+                    <div class="card card-shadow mb-2">
+                        <div class="card-header border-0">
+                                     {% if messages %}
+                                     {% for message in messages %}
+                                         <div class="alert alert-{{message.tags}}">
+                                            {{message}}
+                                         </div>
+                                     {% endfor %}
+                                   {% endif %}
+                            <div class="custom-title-wrap bar-primary">
+                                <div class="custom-title">
+
+                                                 Docteur
+
+                                 </div>
+                            </div>
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                       <ul>
+                                             <li> Numero: {{detail_docteur.num}}  </li>
+                                              <li> Nom: {{detail_docteur.nom}}  </li>
+                                             <li>Prenom: {{detail_docteur.prenom}}  </li>
+                                             <li> Tel: {{detail_docteur.tel }}   </li>
+
+
+                                             <li> Adresse: {{detail_docteur.adresse}}
+                                            </li> </li> <li> Specialite: {{detail_docteur.specialite}}   </li>
+
+
+                                       </ul>
+
+
+
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <!--/main content wrapper-->
+        </div>
+    </div>
+
+
+{% endblock  %}
+
+<!--        -->
+

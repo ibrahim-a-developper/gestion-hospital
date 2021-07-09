@@ -1,7 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce86ad80-64df-4510-876f-700db07e8be2" name="Default Changelist" comment="" />
+    <list default="true" id="ce86ad80-64df-4510-876f-700db07e8be2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Dell.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/add_hospitaliser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/add_salle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/add_service.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/add_specialite.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/detail_docteur.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/detail_maladie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/detail_service.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/docteur_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/hospitialiser_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/infermier_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/list_hospitialiser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/list_infermier.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/list_maladie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/list_salle_specialite.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/list_service.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/maladie_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/salle_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/service_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/specialite_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/update_docteur.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/update_hospitialiser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/update_infermier.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/update_maladie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/update_salle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/update_service.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/personne/templates/update_specialite.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hopital/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hopital/migrations/0002_auto_20210505_2347.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hopital/migrations/0003_auto_20210506_0001.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hopital/migrations/0004_auto_20210506_0014.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hopital/migrations/0005_auto_20210506_0019.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/personne/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/personne/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/personne/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/migrations/0002_auto_20210505_2347.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/migrations/0003_auto_20210506_0001.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/migrations/0004_personne_prenom.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/migrations/0005_maladie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/migrations/0006_hospitaliser_salle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/migrations/0007_auto_20210506_0025.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/migrations/0008_auto_20210506_0029.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/personne/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/templates/add_docteur.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/templates/add_docteur1.html" beforeDir="false" afterPath="$PROJECT_DIR$/personne/templates/add_docteur1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/templates/add_infermier.html" beforeDir="false" afterPath="$PROJECT_DIR$/personne/templates/add_infermier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/templates/add_maladie.html" beforeDir="false" afterPath="$PROJECT_DIR$/personne/templates/add_maladie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/templates/d.html" beforeDir="false" afterPath="$PROJECT_DIR$/personne/templates/d.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/personne/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/templates/list_docteur1.html" beforeDir="false" afterPath="$PROJECT_DIR$/personne/templates/list_docteur1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/templates/list_personne.html" beforeDir="false" afterPath="$PROJECT_DIR$/personne/templates/list_personne.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/personne/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personne/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/personne/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_M1_hopitale/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/projet_M1_hopitale/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_M1_hopitale/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/projet_M1_hopitale/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +77,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1s7QDftuVQ0Xr4FZfZTsbYiyNJf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,7 +90,8 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/CRUD-System-master/CRUD-System-master/crud" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -40,9 +107,17 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625441978214">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1625441978214" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1620344405066">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1620344405066" />
+    <state x="303" y="1" key="search.everywhere.popup" timestamp="1625420199855">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1625420199855" />
   </component>
 </project>

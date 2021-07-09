@@ -1,10 +1,11 @@
 from django.contrib import admin
 
 # Register your models here.
-from personne.models import Personne, Docteur, Infermier, Service, Maladie, Salle, Hospitaliser
+from personne.models import Personne, Docteur, Infermier, Service, Maladie, Salle, Hospitaliser, Specialite
 
 admin.site.register(Personne)
 admin.site.register(Docteur)
+admin.site.register(Specialite)
 admin.site.register(Infermier)
 
 admin.site.register(Service)

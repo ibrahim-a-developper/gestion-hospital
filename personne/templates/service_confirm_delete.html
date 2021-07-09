@@ -1,0 +1,62 @@
+{% extends 'base.html'%}
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container">
+
+  <!-- Trigger the modal with a button -->
+
+
+  <!-- Modal -->
+<!--  <div class="modal fade" id="myModal" role="dialog">-->
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Supprimer un service</h4>
+
+                       <button type="button" class="close" data-dismiss="modal">
+                                <a href="{% url 'personne:list_service' %}" >&times;</a>
+                       </button>
+
+
+        </div>
+          <div class="modal-body">
+                      <!--    form      -->
+
+    <form method="POST">
+
+        <p class="p-0 d-inline-block "> Voulez vous vraiment supprimez cette service  ? </p>
+        <ul>
+            <li>Nom service : {{docteur.nom_service}}</li>
+            <li>Nom batiment: {{docteur.batiment}}</li>
+             <li>Nom directeur : {{docteur.directeur}}</li>
+        </ul>
+        {% csrf_token %}
+        <input class="btn btn-danger mt-3 p-2" type="submit" value="Oui">
+        <a class="btn btn-secondary mt-3 back-btn p-2" href="{% url 'personne:list_service'  %}">Non</a>
+    </form>
+          </div>
+
+
+
+        <div class="modal-footer">
+
+                      <a href="#" >
+                         <button type="button" class="btn btn-default p-2 " data-dismiss="modal">
+                         Close
+                        </button>
+                      </a>
+
+        </div>
+
+
+          <!--   endform         -->
+      </div>
+    </div>
+
+</div>
+
+{%  endblock  %}
+
+

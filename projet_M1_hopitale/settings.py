@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #my apps
     'hopital',
     'personne',
+    'accounts',
 
     'crispy_forms',
     'bootstrap4',
@@ -137,3 +138,4 @@ MEDIA_ROOT=os.path.join(BASE_DIR, "madia")
 
 #crispy
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL = 'personne:home'

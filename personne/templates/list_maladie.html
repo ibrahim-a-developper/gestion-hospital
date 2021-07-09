@@ -1,0 +1,135 @@
+{% extends 'base.html'%}
+{% block content %}
+
+
+{% load crispy_forms_tags %}
+
+<div class="content-wrapper">
+
+        <div class="container-fluid">
+
+            <!--page title-->
+            <div class="page-title mb-4 d-flex align-items-center">
+                <div class="mr-auto">
+                    <h4 class="weight500 d-inline-block pr-3 mr-3 border-right">Table Maladie</h4>
+                    <nav aria-label="breadcrumb" class="d-inline-block ">
+                        <ol class="breadcrumb p-0">
+                            <li class="breadcrumb-item"><a href="{% url 'personne:home' %}">Accueil</a></li>
+                            
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!--/page title-->
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card card-shadow mb-4">
+                        <div class="card-header border-0">
+
+                            <div class="custom-title-wrap bar-primary">
+
+
+                                <div class="custom-title">Maladie</div>
+                            </div>
+                             <div class=" widget-action-link">
+                                        <div class="row">
+                                        <div class="dropdown" style="margin-right: 15px">
+                                            <a href="#" class="btn btn-transparent text-secondary dropdown-hover p-0" data-toggle="dropdown">
+                                                Filter <i class="fa fa-caret-down pl-2"></i>
+                                            </a>
+
+                                        </div>
+                                        </div>
+
+                                    </div>
+
+                            {% if messages %}
+                                {% for message in messages %}
+                                 <div class="alert alert-{{message.tags}}">
+                                    {{message}}
+                                 </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <ul type="none" class="object-tools">
+
+                              <li>
+
+                                <a href="{% url 'personne:add_maladie' %} " title="Ajouter maladie"  class="addlink btn btn-primary p-1">
+                                    Add maladie <big>+</big>
+                                </a>
+                              </li>
+
+                       </ul>
+                        <div class="card-body- pt-3 pb-4">
+                            <div class="table-responsive">
+                                <table id="data_table" class="table table-bordered table-striped" cellspacing="0">
+
+                                    <thead>
+
+                                    <tr>
+                                        <th>Numero </th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Tel</th>
+                                         <th>Adresse </th>
+                                        <th>Date </th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tfoot>
+
+                                    <tr>
+                                        <th>Numero </th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Tel</th>
+                                         <th>Adresse </th>
+                                        <th>Date </th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </tfoot>
+                                    <tbody>
+                                    {% for  list in maladies  %}
+                                    <tr>
+                                        <td>{{ list.num }}</td>
+                                        <td>{{ list.nom }}</td>
+                                        <td>{{ list.prenom }}</td>
+                                        <td>{{ list.tel}}</td>
+                                        <td>{{ list.adresse}}</td>
+                                        <td>{{ list.date_entree }}</td>
+
+                                        <!--   |date:'d M o'-->
+                                         <td>
+                                             <a class="text-dark btn btn-outline-info p-2" href="{% url 'personne:detail_maladie' list.id %}" data-toggle="tooltip" data-placement="right" title="View "><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                             <a class="text-dark btn btn-outline-primary p-2 btn-md" href="{% url 'personne:update_maladie' list.id %}"  data-toggle="tooltip" data-placement="right" title="Modifier "><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                             <a class="btn btn-outline-danger p-2 btn-md " href="{% url 'personne:delete_maladie' list.id %}" data-toggle="tooltip" data-placement="right" title="Supprimer " >  <i class="fa fa-trash-o" aria-hidden="true"></i>  </a>
+
+
+                                         </td>
+                                    </tr>
+                                  {% empty %}
+                                      <tr>
+                                        <td colspan="7" class="text-center bg-warning "> Aucun enregistrement</td>
+                                    </tr>
+                                 {% endfor %}
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<!--    footer -->
+
+
+
+
+    </div>
+
+{% endblock content %}

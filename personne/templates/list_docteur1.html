@@ -11,12 +11,11 @@
             <!--page title-->
             <div class="page-title mb-4 d-flex align-items-center">
                 <div class="mr-auto">
-                    <h4 class="weight500 d-inline-block pr-3 mr-3 border-right">Table Equipement</h4>
+                    <h4 class="weight500 d-inline-block pr-3 mr-3 border-right">Table Docteur</h4>
                     <nav aria-label="breadcrumb" class="d-inline-block ">
                         <ol class="breadcrumb p-0">
                             <li class="breadcrumb-item"><a href="{% url 'personne:home' %}">Accueil</a></li>
-                            <li class="breadcrumb-item"><a href="#">TableInstallation</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">TableEquipement</li>
+
                         </ol>
                     </nav>
                 </div>
@@ -31,7 +30,7 @@
                             <div class="custom-title-wrap bar-primary">
 
 
-                                <div class="custom-title">Equipement</div>
+                                <div class="custom-title">Docteur</div>
                             </div>
                              <div class=" widget-action-link">
                                         <div class="row">
@@ -57,8 +56,8 @@
 
                               <li>
 
-                                <a href="{% url 'personne:add_docteur' %} " title="Ajouter Equipement"  class="addlink btn btn-primary p-1">
-                                    Add equipement <big>+</big>
+                                <a href="{% url 'personne:add_docteur' %} " title="Ajouter infermiere"  class="addlink btn btn-primary p-1">
+                                    Add docteur <big>+</big>
                                 </a>
                               </li>
 
@@ -104,13 +103,13 @@
                                          <td>
 
 
-                                              <a class="text-dark btn btn-outline-info p-2" href="#" title="View equipement"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                              <a class="text-dark btn btn-outline-info p-2" href="{% url 'personne:detail_docteur' list.id %}" title="View equipement"><i class="fa fa-eye" aria-hidden="true"></i></a>
 
 
 
-                                              <a class="text-dark btn btn-outline-primary p-2 btn-md" href="#" title="Modifier equipement"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                              <a class="text-dark btn btn-outline-primary p-2 btn-md" href="{% url 'personne:update_docteur' list.id %}"  title="Modifier docteur"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 
-                                               <a class="btn btn-outline-danger p-2 btn-md " href="#" title="Supprimer equipement" >  <i class="fa fa-trash-o" aria-hidden="true"></i>  </a>
+                                               <a class="btn btn-outline-danger p-2 btn-md " href="{% url 'personne:delete_docteur' list.id %}" title="Supprimer docteur" >  <i class="fa fa-trash-o" aria-hidden="true"></i>  </a>
 
 
 

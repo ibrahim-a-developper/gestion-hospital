@@ -37,7 +37,7 @@
 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="creative-state-icon bg-danger text-center pull-left">
-                        <i class="vl_clip-board"></i>
+                       <i class="fa fa-user-md" style="font-size:60px;"></i>
                     </div>
                     <div class="creative-state-info text-center pull-left">
                          <a href="#">
@@ -51,12 +51,12 @@
 
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="creative-state-icon bg-warning text-center pull-left">
-                          <div class="preview col-sm-6 col-md-4 col-lg-3"><i class="ti-plug"></i></div>
+                          <div class="preview col-sm-6 col-md-4 col-lg-3"><i class='fas fa-user-nurse' style='font-size:60px;color:red'></i></div>
                     </div>
                     <div class="creative-state-info text-center pull-left">
                         <a href="#">
                         <h3 class="mt-4">{{nbr_infermier}}</h3>
-                        <p class="mb-0">totale infermiers</p>
+                        <p class="mb-0">totale infirmiers</p>
                         </a>
 
 
@@ -82,7 +82,7 @@
 
                  <div class="col-lg-3 col-md-6 mb-4">
                     <div class="creative-state-icon bg-purple text-center pull-left">
-                          <div class="preview">  <i class="vl_user-male"></i> </div>
+                         <i class="fa fa-hospital-o" style="font-size:60px;"></i>
                     </div>
                     <div class="creative-state-info text-center pull-left">
                         <a href="#">
@@ -104,63 +104,14 @@
 
             <div class="container-fluid">
             <div class="row">
-                    <div class="col-xl-6 col-md-6">
-                        <div class="card card-shadow mb-4">
-                            <div class="card-header border-0">
-                                <div class="custom-title-wrap bar-danger">
-                                    <div class="custom-title">
-                                        Statistique
-                                        <ul class="nav nav-pills nav-pill-primary nav-pill-custom nav-pills-sm float-right " id="pills-tab2" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" id="pills-today-tab2" data-toggle="pill" href="#pills-weekly2" role="tab" aria-selected="true">Nombre</a>
-                                            </li>
+<!--statique-->
 
-                                        </ul>
-                                    </div>
-                                    <div class="custom-post-title">Statistique etat du service des equipements</div>
-                                </div>
-                            </div>
-                            <div class="card-body pt-5 pb-4">
-                                <div class="tab-content" id="pills-tabContent2">
-                                    <div class="tab-pane fade show active" id="pills-weekly2" role="tabpanel" aria-labelledby="pills-today-tab">
-                                        <div class="row">
-                                            <div class="col-12 col-xl-7 col-md-6 text-center">
-                                                <canvas id="doughnut_chart" class="mb-4" ></canvas>
-                                                <small class="text-muted">Realtime data update instantly</small>
-                                            </div>
-                                            <div class="col-12 col-xl-4 col-md-6 text-muted mt-xl-4">
-                                                <ul class="list-unstyled f12">
-                                                    <li class="list-widget-border mb-3 pb-3">
-                                                        <i class="fa fa-circle pr-2" style="color: #cae59b"></i> 2
-                                                        <span class="float-right">En service</span>
-
-                                                    </li>
-                                                    <li class="list-widget-border mb-3 pb-3">
-                                                        <i class="fa fa-circle pr-2" style="color: #fcdd82"></i> 12
-                                                        <span class="float-right">Non attribut</span>
-                                                    </li>
-                                                    <li class="list-widget-border mb-3 pb-3">
-                                                        <i class="fa fa-circle pr-2 " style="color: #f79490"></i> 14
-                                                        <span class="float-right">En panne</span>
-                                                    </li>
-
-                                                </ul>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                   <div class=" col-xl-6 col-md-6">
+                   <div class=" col-xl-12 col-md-6">
                     <div class="card card-shadow mb-4 ">
                         <div class="card-header border-0">
                             <div class="custom-title-wrap bar-danger">
                                 <div class="custom-title">
-                                    Statistique Direction
+                                    Statistique Service
                                     <a href="javascript:;" class="btn-ordering btn-primary float-right ml-2">
                                         <i class="fa fa-sort-alpha-asc"></i>
                                     </a>
@@ -172,22 +123,45 @@
                             <div class="tab-content" id="pills-tabContent">
                                 <div class="tab-pane fade show active" id="pills-today" role="tabpanel" aria-labelledby="pills-today-tab">
                                     <ul class="list-unstyled mb-0 list-widget">
+                                        {% for list in service%}
 
                                         <li>
                                             <div class="media mb-4">
 
                                                 <div class="media-body list-widget-border">
+
                                                     <div class="float-left">
-                                                        <h6 class="text-uppercase mb-0">ttt</h6>
-                                                        <span>nombre des equipements installe </span>
+                                                        <h6 class="text-uppercase mb-0">{{list.nom_service}}</h6>
+                                                        <span>nombre des salles </span>
                                                     </div>
                                                     <div class=" float-right">
-                                                        <strong>1 <i class="fa fa-level-up text-success pl-2"></i></strong>
+                                                        <strong>{{list.salle_service.count}}<i class="fa fa-level-up text-success pl-2"></i></strong>
                                                     </div>
+
                                                 </div>
 
                                             </div>
                                         </li>
+
+                                         {% endfor %}
+                                                 {%if list_direction.has_other_pages%}
+
+                                              <div class="container " >
+                                                  <ul class="pagination" style="margin-left: 20px">
+                                                    {%if list_direction.has_previous%}
+                                                      <li class="page-item"><a class="page-link" href="?page={{list_direction.previous_page_number}}"><i class="ti-angle-left"></i></a></li>
+                                                    {%endif%}
+
+                                                    {%for i in list_direction.paginator.page_range %}
+                                                       <li class="page-item"><a class="page-link"href="?page={{i}}"><span>{{i}}</span></a></li>
+                                                     {%endfor%}
+                                                    {%if list_direction.has_next%}
+                                                      <li class="page-item"><a class="page-link" href="?page={{list_direction.next_page_number}}"><i class="ti-angle-right"></i></a></li>
+                                                    {%endif%}
+                                                  </ul>
+                                              </div>
+
+                                    {%endif%}
 
 
 
